@@ -945,7 +945,7 @@ body {
 /* PAGES SERVICES */
 .service-hero {
     height: 60vh;
-    background-image: url("C:/Users/PC/Documents/daniel/work/project site caly/photo/547af666008f4002f8079ccfc2e7b141.webp");
+    background-image: url("photo4.jpg");
     background-size: cover;
     background-position: center;
     padding-top: 120px;
@@ -1037,4 +1037,5 @@ body {
         padding: 60px 30px;
     }
 }
+
 
