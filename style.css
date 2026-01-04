@@ -1,0 +1,1039 @@
+@import url('https://fonts.googleapis.com/css2?family=Andika&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Andika', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+/* HEADER */
+.header {
+    width: 100%;
+    height: 75px; /* Hauteur augmentée */
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px; /* un peu plus d'espace latéral */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.8);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+/* LOGO */
+.logo img {
+    width: 55px;  /* Logo agrandi */
+    height: auto;
+}
+
+/* BARRE DE NAVIGATION */
+.headbar {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Plus d’espace entre les liens */
+}
+
+.headbar a {
+    text-decoration: none;
+    color: #333;
+    font-size: 15px; /* Taille augmentée */
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.headbar a:hover {
+    color: #007bff;
+    transform: scale(1.05); /* léger effet au survol */
+}
+
+/* BOUTON HELPLINE */
+.menubtn button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 28px; /* un peu plus grand */
+    font-size: 17px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.menubtn button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* SECTION PRINCIPALE */
+.hero {
+    background-image: url("C:/Users/PC/Documents/daniel/work/project site caly/photo/5516f2d9f34274cf704c79b16e3f79d7.webp");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 100px;
+    color: #000;
+    margin-top: 100px; /* ajusté à la nouvelle hauteur du header */
+}
+
+.hero .content {
+    max-width: 380px;      /* ⬅️ cadre moins large */
+    background-color: rgba(255,255,255,0.85);
+    padding: 20px;         /* ⬅️ moins d’espace intérieur */
+    border-radius: 12px;
+    margin-top: 70px;
+}
+
+
+.hero h4 {
+    font-size: 20px;
+    color: #555;
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin: 15px 0;
+    color: #000;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+/* Bouton principal */
+.appointment-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    font-size: 17px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.appointment-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+    }
+
+    .headbar {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .hero {
+        padding: 40px;
+        text-align: center;
+    }
+
+    .hero .content {
+        background-color: rgba(255,255,255,0.9);
+        margin: 0 auto;
+    }
+}
+
+/* SECTION LOGIN STYLES */
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 20px 20px; /* Ajustement pour le header fixé */
+    background-color: #f5f5f5; /* S'assurer du fond clair */
+}
+
+.login-container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.12);
+    display: flex;
+    width: 80%; /* Largeur du conteneur */
+    max-width: 900px; /* Limite maximale */
+    min-height: 500px; /* Hauteur minimale */
+    overflow: hidden; /* Important pour les bords arrondis */
+}
+
+/* --- Panneau de Connexion (Gauche) --- */
+.login-panel {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 50px;
+    text-align: center;
+}
+
+.login-panel h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 900;
+}
+
+/* Connexion Sociale */
+.social-login {
+    margin: 20px 0;
+}
+
+.social-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    margin: 0 5px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    color: #555;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.social-icon:hover {
+    border-color: #ff6b6b;
+    color: #ff6b6b;
+}
+
+.separator {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 20px;
+}
+
+/* Formulaire */
+.login-form {
+    width: 100%;
+}
+
+.input-group {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    margin: 15px 0;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+}
+
+.input-group i {
+    color: #999;
+    font-size: 18px;
+    margin-right: 15px;
+}
+
+.input-group input {
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 8px 0;
+    font-size: 16px;
+}
+
+.sign-in-btn {
+    background-color: #ff6b6b; /* Couleur orange/rouge du bouton */
+    color: white;
+    border: none;
+    padding: 14px 45px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    letter-spacing: 1px;
+}
+
+.sign-in-btn:hover {
+    background-color: #e55a5a;
+    transform: scale(1.05);
+}
+
+/* --- Panneau de Bienvenue (Droite) --- */
+.welcome-panel {
+    width: 50%;
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* Dégradé violet à bleu */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+}
+
+.panel-content h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.panel-content p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.illustration {
+    width: 120px; /* Taille de l'illustration */
+    margin: 20px 0;
+}
+
+.sign-up-btn {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white; /* Bordure blanche, pas de remplissage */
+    padding: 12px 40px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    letter-spacing: 1px;
+}
+
+.sign-up-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+}
+
+/* Responsive pour la page de connexion */
+@media (max-width: 992px) {
+    .login-container {
+        width: 90%;
+        max-width: 700px;
+        min-height: 450px;
+    }
+}
+
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column; /* Empiler les deux panneaux */
+        max-width: 400px;
+    }
+    
+    .login-panel, .welcome-panel {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .welcome-panel {
+        order: -1; /* Mettre le panneau de bienvenue en haut (optionnel) */
+        border-radius: 12px 12px 0 0;
+    }
+    
+    .login-panel {
+        border-radius: 0 0 12px 12px;
+    }
+
+    .illustration {
+        width: 100px;
+        margin: 15px 0;
+    }
+}
+/* --- STYLES SPÉCIFIQUES À LA PAGE D'INSCRIPTION --- */
+
+/* 1. Inversion des Panneaux (pour le layout Sign Up) */
+.sign-up-layout .login-container {
+    /* Utiliser la propriété flex-direction pour inverser l'ordre des enfants */
+    flex-direction: row-reverse; 
+}
+
+/* 2. Style du Panneau de Bienvenue (Bleu Clair) */
+.sign-up-welcome {
+    /* Remplacer le dégradé sombre par le bleu clair */
+    background: #6bb0e5; /* Ou un code couleur similaire à l'image */
+    color: #333; /* Texte devient sombre sur fond clair */
+}
+
+.sign-up-welcome .panel-content h1 {
+    color: #fff; /* Le titre reste blanc pour le contraste */
+    font-size: 38px;
+    font-weight: 900;
+}
+
+.sign-up-welcome .panel-content p {
+    color: #333; /* Le paragraphe devient foncé */
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 500;
+}
+
+/* 3. Style du bouton "SIGN IN" (maintenant dans le panneau bleu) */
+/* On utilise la même classe 'sign-up-btn' mais on la customise pour ce panneau */
+.sign-up-welcome .sign-up-btn {
+    background-color: white; /* Remplissage blanc */
+    color: #6bb0e5; /* Texte bleu clair */
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sign-up-welcome .sign-up-btn:hover {
+    background-color: #f0f0f0;
+    color: #333;
+    transform: scale(1.05);
+}
+
+
+/* 4. Style du bouton "SIGN UP" (dans le panneau blanc) */
+/* Il est orange, comme le bouton "SIGN IN" de la page de connexion */
+.sign-up-btn-style {
+    background-color: #ff6b6b; /* Orange/Rouge */
+    color: white;
+    border: none;
+}
+
+.sign-up-btn-style:hover {
+    background-color: #e55a5a;
+    transform: scale(1.05);
+}
+
+/* Ajustement responsive pour l'inversion */
+@media (max-width: 768px) {
+    .sign-up-layout .login-container {
+        flex-direction: column; /* Empilement pour mobile */
+    }
+}
+/* PAGE A PROPOS */
+.about-page {
+    padding: 160px 100px;
+    background-color: #fff;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h1 {
+    font-size: 38px;
+    margin-bottom: 25px;
+    font-weight: 900;
+}
+
+.about-text p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.about-image {
+    flex: 0.9;
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 14px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.director-name {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-page {
+        padding: 120px 30px;
+    }
+}
+/* SECTION A PROPOS */
+/* HERO A PROPOS (même fond que l'accueil) */
+
+/* Hero réutilisé pour la page À propos - avec fond flou */
+.hero {
+    position: relative;                    /* Nécessaire pour le ::before */
+    height: 100vh;                         /* Plein écran */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;               /* Centré horizontalement et verticalement */
+    padding: 0 100px;
+    margin-top: 70px;                     /* Pour compenser le header fixe */
+    overflow: hidden;                      /* Évite que le flou déborde */
+    color: #000;
+}
+
+/* Image de fond floue */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("C:/Users/PC/Documents/daniel/work/project site caly/photo/5516f2d9f34274cf704c79b16e3f79d7.webp"); /* Chemin relatif recommandé */
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);                    /* Ajuste ici : 8px = léger, 12px = plus flou */
+    transform: scale(1.1);                 /* Compense les bords blancs causés par le blur */
+    z-index: -2;                           /* Tout derrière */
+}
+
+/* Overlay sombre léger pour améliorer le contraste (optionnel mais recommandé) */
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25);  /* Sombre léger - ajuste l'opacité si besoin */
+    z-index: -1;
+}
+
+/* Conteneur principal - cadre blanc semi-transparent pour faire ressortir le contenu */
+.about-container {
+    position: relative;                    /* Au-dessus du fond flou */
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.95); /* Blanc presque opaque */
+    padding: 60px 80px;
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+/* Texte */
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 36px;
+    margin-bottom: 25px;
+    font-weight: 900;
+    color: #111;
+}
+
+.about-text p {
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+/* Image du directeur */
+.about-image {
+    flex: 0.9;
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 14px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.director-name {
+    display: block;
+    margin-top: 15px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #111;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        padding: 40px 20px;
+        height: auto;                      /* Hauteur auto sur mobile */
+        min-height: 100vh;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 30px;
+        gap: 40px;
+    }
+
+    .about-image img {
+        max-width: 280px;
+    }
+
+    .about-text h2 {
+        font-size: 32px;
+    }
+}
+/* FOOTER CONTACT */
+.contact-footer {
+    background: #1c1c1c;
+    color: #fff;
+    padding: 35px 80px;
+    font-family: 'Andika', sans-serif;
+}
+
+/* Partie haute */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-left {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-link {
+    color: #f5c400; /* jaune élégant */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-socials a {
+    color: #f5c400;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* Ligne */
+.contact-footer hr {
+    border: none;
+    border-top: 1px solid #333;
+    margin: 30px 0;
+}
+
+/* Partie basse */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #ccc;
+    margin-right: 20px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links a:hover,
+.footer-socials a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    font-size: 13px;
+    color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-footer {
+        padding: 40px 30px;
+        text-align: center;
+    }
+
+    .footer-top,
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-socials a {
+        margin: 0 10px;
+    }
+}
+/* TOP BAR */
+.topbar {
+    background-color: #0b2d4d; /* bleu foncé corporate */
+    color: #fff;
+    font-size: 13px;
+    padding: 8px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topbar-left span {
+    margin-right: 15px;
+    opacity: 0.9;
+}
+
+.topbar-right a,
+.topbar-right .lang {
+    color: #fff;
+    margin-left: 15px;
+    text-decoration: none;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+.topbar-right a:hover {
+    text-decoration: underline;
+}
+/* TOP BAR */
+.topbar {
+    background-color: #0b2d4d; /* bleu foncé corporate */
+    color: #fff;
+    font-size: 13px;
+    padding: 8px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topbar-left span {
+    margin-right: 15px;
+    opacity: 0.9;
+}
+
+.topbar-right a,
+.topbar-right .lang {
+    color: #fff;
+    margin-left: 15px;
+    text-decoration: none;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+.topbar-right a:hover {
+    text-decoration: underline;
+}
+@media (max-width: 768px) {
+    .topbar {
+        display: none; /* cache la topbar sur mobile */
+    }
+
+    .header {
+        padding: 0 20px;
+    }
+}
+/* SLOGAN CALY */
+.caly-slogan {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #0b4da2;              /* Bleu corporate élégant */
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 0;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+}
+
+.caly-slogan span {
+    display: block;
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1f5fbf;              /* Bleu plus doux */
+    font-family: 'Andika', sans-serif;
+}
+/* Nouvelle section Mission - en dessous du cadre principal */
+/* Section Notre Mission - bien séparée du cadre du haut */
+.mission-section {
+    position: relative;
+    width: 100%;
+    padding: 120px 100px 80px; /* Espacement généreux en haut pour ne pas coller */
+}
+
+.mission-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 60px;
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* Image à gauche : plus grande et imposante */
+.mission-image img {
+    width: 100%;
+    max-width: none;          /* Pas de limite max */
+    min-width: 650px;         /* Encore plus grande sur grand écran */
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Conteneur : plus d'espace entre image et texte */
+.mission-container {
+    gap: 120px;               /* Écart plus grand pour équilibrer */
+}
+
+/* Textes à droite : taille réduite */
+.mission-text h2 {
+    font-size: 36px;          /* Titre un peu plus petit */
+    margin-bottom: 30px;
+    color: #003087;
+    font-weight: 900;
+}
+
+.mission-text p {
+    font-size: 16px;          /* Paragraphe réduit */
+    line-height: 1.7;
+    margin-bottom: 35px;
+    color: #333;
+}
+
+.ateliers-list li {
+    font-size: 15px;          /* Liste réduite */
+    line-height: 1.7;
+    margin-bottom: 20px;
+    padding-left: 35px;
+    color: #444;
+}
+
+.ateliers-list li::before {
+    font-size: 24px;          /* Coche un peu plus petite pour l'équilibre */
+    top: -3px;
+}
+
+/* Responsive : sur tablette/mobile, l'image reste grande mais adaptée */
+@media (max-width: 1200px) {
+    .mission-image img {
+        min-width: 500px;
+    }
+}
+
+@media (max-width: 992px) {
+    .mission-image img {
+        min-width: auto;
+        max-width: 100%;
+    }
+    
+    .mission-text p,
+    .ateliers-list li {
+        font-size: 16px;      /* Un peu plus grand sur mobile pour lisibilité */
+    }
+}
+    
+    .mission-image {
+        order: -1; /* Image en haut sur mobile */
+    }
+    
+    .mission-image img {
+        max-width: 100%;
+    }
+    
+    .mission-text h2 {
+        font-size: 36px;
+    }
+/* Section Vidéo à la fin de la page À propos */
+.video-section {
+    position: relative;
+    width: 100%;
+    padding: 100px 100px 120px; /* Espacement pour séparer de la section précédente */
+    text-align: center;
+}
+
+.video-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 60px;
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.video-container h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+    color: #003087; /* Bleu foncé comme le titre "Notre Mission" */
+    font-weight: 900;
+}
+
+.video-container p {
+    font-size: 18px;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+.video-container iframe {
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .video-section {
+        padding: 80px 30px;
+    }
+    
+    .video-container {
+        padding: 40px;
+    }
+    
+    .video-container iframe {
+        height: 350px;
+    }
+}
+/* MENU DEROULANT SERVICES */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 260px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    z-index: 999;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 12px 18px;
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.dropdown-content a:hover {
+    background-color: #f2f2f2;
+}
+
+/* Affichage du menu */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/* PAGES SERVICES */
+.service-hero {
+    height: 60vh;
+    background-image: url("C:/Users/PC/Documents/daniel/work/project site caly/photo/547af666008f4002f8079ccfc2e7b141.webp");
+    background-size: cover;
+    background-position: center;
+    padding-top: 120px;
+    text-align: center;
+    color: #fff;
+}
+
+.service-hero h1 {
+    font-size: 42px;
+    font-weight: 800;
+}
+
+.service-hero p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Galerie */
+.service-gallery {
+    padding: 80px 100px;
+    background-color: #fff;
+}
+
+.service-gallery h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+/* SECTION CONTACT DETAILS */
+.contact-details {
+    background: #111;
+    color: #fff;
+    padding: 35px 85px;
+    text-align: center;
+}
+
+.contact-details h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #f5c400;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.contact-item {
+    background: #1c1c1c;
+    padding: 30px;
+    border-radius: 12px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.contact-item a {
+    color: #f5c400;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-details {
+        padding: 60px 30px;
+    }
+}
