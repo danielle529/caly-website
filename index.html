@@ -127,7 +127,8 @@ alliant traditions ancestrales et technologies modernes.
   </div>
   <h3>Besoin d’aide ?</h3>
   <p>My Cally répond à vos questions 24/7.</p>
-  <a href="#chatbot" class="service-btn">Discuter →</a>
+<a href="#" class="service-btn" onclick="openChatbot()">Discuter →</a>
+
 </div>
 
 <div class="service-card">
@@ -142,9 +143,74 @@ alliant traditions ancestrales et technologies modernes.
 </section>
 
 
+<!-- Bouton du chatbot -->
+<div id="chatbot-toggle">💬</div>
+
+<!-- Fenêtre du chatbot -->
+<div id="chatbot">
+  <div class="chatbot-header">
+    My Cally
+    <span id="chatbot-close">✕</span>
+  </div>
+
+  <div class="chatbot-messages" id="chatbot-messages">
+    <div class="bot-message">
+      Bonjour 👋 <br>
+      Je suis My Cally. Comment puis-je vous aider ?
+    </div>
+
+    <div class="quick-questions">
+      <button onclick="sendQuestion('services')">Quels services proposez-vous ?</button>
+      <button onclick="sendQuestion('sur-mesure')">Travaillez-vous sur mesure ?</button>
+      <button onclick="sendQuestion('devis')">Comment demander un devis ?</button>
+      <button onclick="sendQuestion('contact')">Vous contacter</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const chatbot = document.getElementById("chatbot");
+  const toggle = document.getElementById("chatbot-toggle");
+  const closeBtn = document.getElementById("chatbot-close");
+  const messages = document.getElementById("chatbot-messages");
+
+  toggle.onclick = () => {
+    chatbot.style.display = "flex";
+  };
+
+  closeBtn.onclick = () => {
+    chatbot.style.display = "none";
+  };
+
+  function sendQuestion(type) {
+    let response = "";
+
+    if (type === "services") {
+      response = "CALY propose des services artisanaux : menuiserie, textile, maroquinerie et créations sur mesure.";
+    } else if (type === "sur-mesure") {
+      response = "Oui, tous nos projets sont réalisés sur mesure.";
+    } else if (type === "devis") {
+      response = "Pour demander un devis, cliquez sur My Cally.";
+    } else if (type === "contact") {
+      response = "Vous pouvez nous contacter via la page Contact.";
+    }
+
+    const msg = document.createElement("div");
+    msg.className = "bot-message";
+    msg.innerText = response;
+    messages.appendChild(msg);
+  }
+  function openChatbot() {
+  const chatbot = document.getElementById("chatbot");
+  chatbot.style.display = "flex";
+}
+
+</script>
+  
 </body>
 
 </html>
+
 
 
 
